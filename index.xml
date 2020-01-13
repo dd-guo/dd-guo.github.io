@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
+    <link>https://dd-guo.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dd-guo.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/about/me/</link>
+      <link>https://dd-guo.github.io/about/me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/about/me/</guid>
+      <guid>https://dd-guo.github.io/about/me/</guid>
       <description>履历 依图医疗 (2019.6 ~ )  医疗大数据: 医疗数据接入，加工，服务。 关键词: 数据平台，k8s，ETL  挖财 (2014.7 ~ 2019.6)  钱管家: 网页数据解析；App服务端开发. KeyWord: Python, lxml, HTML, RegExr, XPath; Tomcat, Java Web, Spring MVC 用户中心: 微服务改造，服务接口梳理重构；经历2次和QQ联合的高流量活动。 KeyWord: SpringBoot, Dubbo, Kafka, MySQK, Cobar, Refeactor 信贷数据平台  搭建基于Canal + Flink + HBase/Phoenix的实时数据同步以及服务，支撑信贷风控数据查询。 KeyWord: Canal, Binlog, Flink, Yarn, HBase, Phoenix, HA 维护Hive + Spark/Presto + Zeppelin的分析平台，支持风控建模数据分析。KeyWord: Hive, Spark, Zeppelin, Datax, Scheduler   挖财数据中台  整合公司的数据平台，开放技术能力给业务线。打造实时标签平台，运营平台，广告投放平台。KeyWord: Cloudera Manager, Presto, Flink-CEP 提供设备指纹，埋点数据等数据服务助力多业务线快速发展。 KeyWord: 神策, Kudu, Impala    同花顺 (2012.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/posts/presto_memory/</link>
+      <link>https://dd-guo.github.io/posts/presto_memory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/presto_memory/</guid>
+      <guid>https://dd-guo.github.io/posts/presto_memory/</guid>
       <description>code  builder.put(RESERVED_POOL, new MemoryPool(RESERVED_POOL, config.getMaxQueryMemoryPerNode())); builder.put(SYSTEM_POOL, new MemoryPool(SYSTEM_POOL, systemMemoryConfig.getReservedSystemMemory())); general_pool  long maxHeap = Runtime.getRuntime().maxMemory(); maxMemory = new DataSize(maxHeap - systemMemoryConfig.getReservedSystemMemory().toBytes(), BYTE); DataSize generalPoolSize = new DataSize(Math.max(0, maxMemory.toBytes() - config.getMaxQueryMemoryPerNode().toBytes()), BYTE); builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize)); explain  RESERVED_POOL = config.properties query.max-memory-per-node SYSTEM_POOL = config.properties resources.reserved-system-memory (default Runtime.getRuntime().maxMemory() * 0.4 即 0.4 * Xmx) GENERAL_POOL = Xmx - RESERVED_POOL - SYSTEM_POOL  description  GENERAL_POOL the memory pool used by the physical operators in a query SYSTEM_POOL mostly used by the exchange buffers and readers/writers RESERVED_POOL for running a large query when the general pool becomes full (only used by one query), 条件  GENERAL_POOL有节点出现阻塞节点（block node）情况，即该node内存不足 RESERVED_POOL没有被使用    action  整体presto给30G内存，requests是30G，limits是32G 可以把reserved_pool分配到5G; system_pool 10G; general_pool 15G  参数设置 yaml  limits: 35G requests: 32G  config.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/posts/todo/</link>
+      <link>https://dd-guo.github.io/posts/todo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/todo/</guid>
+      <guid>https://dd-guo.github.io/posts/todo/</guid>
       <description>arch presto  introduction  start up by https://blog.openbridge.com/what-is-facebook-presto-presto-database-or-prestodb-a-powerful-sql-query-engine-77d4c4a66d4 forked https://groups.google.com/forum/#!topic/presto-users/TRwGWf9Z2_o contributions outside facebook   原理  https://tech.meituan.com/2014/06/16/presto.html    审计安全  https://tech.meituan.com/2019/02/14/data-security-platform-construction-practice-jiangjunling.html  关于登陆  统一登陆模块  关于贝佐斯的原则  https://gist.github.com/chitchcock/1281611  All teams will henceforth expose their data and functionality through service interfaces. Teams must communicate with each other through these interfaces. There will be no other form of interprocess communication allowed: no direct linking, no direct reads of another team&#39;s data store, no shared-memory model, no back-doors whatsoever.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/readme/</link>
+      <link>https://dd-guo.github.io/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/readme/</guid>
+      <guid>https://dd-guo.github.io/readme/</guid>
       <description>背景  提出来源？ landscape? 阶段？  现状?  xxx  大数据领域技术
 参考资料  https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation https://baike.baidu.com/item/%E5%A4%A7%E6%95%B0%E6%8D%AE/1356941 https://wethinker.com/2016/04/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8F%B2%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E7%A9%B6%E7%AB%9F%E8%B0%81%E6%98%AF%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E7%88%B6%EF%BC%9F/ https://www.infoq.cn/article/O2WfZkiWfU*LNP3IJXGz http://www.cac.gov.cn/wxb_pdf/baipishu/dashuju020180418587931723585.pdf  </description>
     </item>

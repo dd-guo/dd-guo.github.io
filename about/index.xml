@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on My New Hugo Site</title>
-    <link>http://example.org/about/</link>
+    <link>https://dd-guo.github.io/about/</link>
     <description>Recent content in Abouts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     
-	<atom:link href="http://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dd-guo.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/about/me/</link>
+      <link>https://dd-guo.github.io/about/me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/about/me/</guid>
+      <guid>https://dd-guo.github.io/about/me/</guid>
       <description>履历 依图医疗 (2019.6 ~ )  医疗大数据: 医疗数据接入，加工，服务。 关键词: 数据平台，k8s，ETL  挖财 (2014.7 ~ 2019.6)  钱管家: 网页数据解析；App服务端开发. KeyWord: Python, lxml, HTML, RegExr, XPath; Tomcat, Java Web, Spring MVC 用户中心: 微服务改造，服务接口梳理重构；经历2次和QQ联合的高流量活动。 KeyWord: SpringBoot, Dubbo, Kafka, MySQK, Cobar, Refeactor 信贷数据平台  搭建基于Canal + Flink + HBase/Phoenix的实时数据同步以及服务，支撑信贷风控数据查询。 KeyWord: Canal, Binlog, Flink, Yarn, HBase, Phoenix, HA 维护Hive + Spark/Presto + Zeppelin的分析平台，支持风控建模数据分析。KeyWord: Hive, Spark, Zeppelin, Datax, Scheduler   挖财数据中台  整合公司的数据平台，开放技术能力给业务线。打造实时标签平台，运营平台，广告投放平台。KeyWord: Cloudera Manager, Presto, Flink-CEP 提供设备指纹，埋点数据等数据服务助力多业务线快速发展。 KeyWord: 神策, Kudu, Impala    同花顺 (2012.</description>
     </item>
     

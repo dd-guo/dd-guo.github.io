@@ -3,43 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/about/me/</loc>
+    <loc>https://dd-guo.github.io/about/me/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/presto_memory/</loc>
+    <loc>https://dd-guo.github.io/posts/presto_memory/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/todo/</loc>
+    <loc>https://dd-guo.github.io/posts/todo/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/readme/</loc>
+    <loc>https://dd-guo.github.io/readme/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>https://dd-guo.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://dd-guo.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://dd-guo.github.io/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://dd-guo.github.io/posts/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://dd-guo.github.io/tags/</loc>
   </url>
   
 </urlset>

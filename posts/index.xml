@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>http://example.org/posts/</link>
+    <link>https://dd-guo.github.io/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dd-guo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/posts/presto_memory/</link>
+      <link>https://dd-guo.github.io/posts/presto_memory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/presto_memory/</guid>
+      <guid>https://dd-guo.github.io/posts/presto_memory/</guid>
       <description>code  builder.put(RESERVED_POOL, new MemoryPool(RESERVED_POOL, config.getMaxQueryMemoryPerNode())); builder.put(SYSTEM_POOL, new MemoryPool(SYSTEM_POOL, systemMemoryConfig.getReservedSystemMemory())); general_pool  long maxHeap = Runtime.getRuntime().maxMemory(); maxMemory = new DataSize(maxHeap - systemMemoryConfig.getReservedSystemMemory().toBytes(), BYTE); DataSize generalPoolSize = new DataSize(Math.max(0, maxMemory.toBytes() - config.getMaxQueryMemoryPerNode().toBytes()), BYTE); builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize)); explain  RESERVED_POOL = config.properties query.max-memory-per-node SYSTEM_POOL = config.properties resources.reserved-system-memory (default Runtime.getRuntime().maxMemory() * 0.4 即 0.4 * Xmx) GENERAL_POOL = Xmx - RESERVED_POOL - SYSTEM_POOL  description  GENERAL_POOL the memory pool used by the physical operators in a query SYSTEM_POOL mostly used by the exchange buffers and readers/writers RESERVED_POOL for running a large query when the general pool becomes full (only used by one query), 条件  GENERAL_POOL有节点出现阻塞节点（block node）情况，即该node内存不足 RESERVED_POOL没有被使用    action  整体presto给30G内存，requests是30G，limits是32G 可以把reserved_pool分配到5G; system_pool 10G; general_pool 15G  参数设置 yaml  limits: 35G requests: 32G  config.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/posts/todo/</link>
+      <link>https://dd-guo.github.io/posts/todo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/todo/</guid>
+      <guid>https://dd-guo.github.io/posts/todo/</guid>
       <description>arch presto  introduction  start up by https://blog.openbridge.com/what-is-facebook-presto-presto-database-or-prestodb-a-powerful-sql-query-engine-77d4c4a66d4 forked https://groups.google.com/forum/#!topic/presto-users/TRwGWf9Z2_o contributions outside facebook   原理  https://tech.meituan.com/2014/06/16/presto.html    审计安全  https://tech.meituan.com/2019/02/14/data-security-platform-construction-practice-jiangjunling.html  关于登陆  统一登陆模块  关于贝佐斯的原则  https://gist.github.com/chitchcock/1281611  All teams will henceforth expose their data and functionality through service interfaces. Teams must communicate with each other through these interfaces. There will be no other form of interprocess communication allowed: no direct linking, no direct reads of another team&#39;s data store, no shared-memory model, no back-doors whatsoever.</description>
     </item>
     
