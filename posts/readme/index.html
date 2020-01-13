@@ -162,61 +162,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             
             <div class="post-body-wrapper">
                 <div class="post-body">
-                    <h3 id="code">code</h3>
+                    <h2 id="heading">背景</h2>
 <ul>
-<li>builder.put(RESERVED_POOL, new MemoryPool(RESERVED_POOL, config.getMaxQueryMemoryPerNode()));</li>
-<li>builder.put(SYSTEM_POOL, new MemoryPool(SYSTEM_POOL, systemMemoryConfig.getReservedSystemMemory()));</li>
-<li>general_pool</li>
+<li>提出来源？</li>
+<li>landscape?</li>
+<li>阶段？</li>
 </ul>
-<pre><code>long maxHeap = Runtime.getRuntime().maxMemory();
-maxMemory = new DataSize(maxHeap - systemMemoryConfig.getReservedSystemMemory().toBytes(), BYTE);
-DataSize generalPoolSize = new DataSize(Math.max(0, maxMemory.toBytes() - config.getMaxQueryMemoryPerNode().toBytes()), BYTE);
-builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize));
-</code></pre><h3 id="explain">explain</h3>
+<h2 id="heading1">现状?</h2>
 <ul>
-<li>RESERVED_POOL = config.properties  query.max-memory-per-node</li>
-<li>SYSTEM_POOL = config.properties  resources.reserved-system-memory (default Runtime.getRuntime().maxMemory() * 0.4 即 0.4 * Xmx)</li>
-<li>GENERAL_POOL = Xmx - RESERVED_POOL - SYSTEM_POOL</li>
+<li>xxx</li>
 </ul>
-<h3 id="description">description</h3>
+<p>大数据领域技术</p>
+<h2 id="heading2">参考资料</h2>
 <ul>
-<li>GENERAL_POOL the memory pool used by the physical operators in a query</li>
-<li>SYSTEM_POOL  mostly used by the exchange buffers and readers/writers</li>
-<li>RESERVED_POOL for running a large query when the general pool becomes full (only used by one query), 条件
-<ul>
-<li>GENERAL_POOL有节点出现阻塞节点（block node）情况，即该node内存不足</li>
-<li>RESERVED_POOL没有被使用</li>
-</ul>
-</li>
-</ul>
-<h3 id="action">action</h3>
-<ol>
-<li>整体presto给30G内存，requests是30G，limits是32G</li>
-<li>可以把reserved_pool分配到5G; system_pool 10G; general_pool 15G</li>
-</ol>
-<h3 id="heading">参数设置</h3>
-<h4 id="yaml">yaml</h4>
-<ul>
-<li>limits: 35G</li>
-<li>requests: 32G</li>
-</ul>
-<h4 id="configproperties">config.properties</h4>
-<ul>
-<li>query.max-memory=80GB</li>
-<li>query.max-total-memory=120GB</li>
-<li>query.max-memory-per-node=10GB</li>
-<li>query.max-total-memory-per-node=20GB</li>
-<li>memory.heap-headroom-per-node=6GB</li>
-<li>resources.reserved-system-memory=10GB</li>
-</ul>
-<h4 id="jvmconfig">jvm.config</h4>
-<ul>
-<li>-Xmx40G</li>
-<li>-Xms32G</li>
-<li>-XX:ConcGCThreads=6</li>
-<li>-XX:ParallelGCThreads=8</li>
-<li>-XX:G1ReservePercent=10</li>
-<li>-XX:InitiatingHeapOccupancyPercent=50</li>
+<li><a href="https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation">https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%A4%A7%E6%95%B0%E6%8D%AE/1356941">https://baike.baidu.com/item/%E5%A4%A7%E6%95%B0%E6%8D%AE/1356941</a></li>
+<li><a href="https://wethinker.com/2016/04/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8F%B2%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E7%A9%B6%E7%AB%9F%E8%B0%81%E6%98%AF%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E7%88%B6%EF%BC%9F/">https://wethinker.com/2016/04/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AE%80%E5%8F%B2%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E7%A9%B6%E7%AB%9F%E8%B0%81%E6%98%AF%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E7%88%B6%EF%BC%9F/</a></li>
+<li><a href="https://www.infoq.cn/article/O2WfZkiWfU">https://www.infoq.cn/article/O2WfZkiWfU</a>*LNP3IJXGz</li>
+<li><a href="http://www.cac.gov.cn/wxb_pdf/baipishu/dashuju020180418587931723585.pdf">http://www.cac.gov.cn/wxb_pdf/baipishu/dashuju020180418587931723585.pdf</a></li>
 </ul>
 
                     <HR width="100%">
@@ -229,13 +192,13 @@ builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize));
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="http://example.org/posts/me/">
+                <a class="newer-posts" href="http://example.org/posts/presto_memory/">
                     Next<br>
                 </a>
                 
                 
                 
-                <a class="older-posts" href="http://example.org/posts/readme/">
+                <a class="older-posts" href="http://example.org/posts/todo/">
                     Previous<br>
                 </a>
                 

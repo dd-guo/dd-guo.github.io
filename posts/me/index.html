@@ -162,61 +162,38 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             
             <div class="post-body-wrapper">
                 <div class="post-body">
-                    <h3 id="code">code</h3>
+                    <h2 id="heading">履历</h2>
+<h3 id="-20196--">依图医疗 (2019.6 ~ )</h3>
 <ul>
-<li>builder.put(RESERVED_POOL, new MemoryPool(RESERVED_POOL, config.getMaxQueryMemoryPerNode()));</li>
-<li>builder.put(SYSTEM_POOL, new MemoryPool(SYSTEM_POOL, systemMemoryConfig.getReservedSystemMemory()));</li>
-<li>general_pool</li>
+<li>医疗大数据: 医疗数据接入，加工，服务。 关键词: 数据平台，k8s，ETL</li>
 </ul>
-<pre><code>long maxHeap = Runtime.getRuntime().maxMemory();
-maxMemory = new DataSize(maxHeap - systemMemoryConfig.getReservedSystemMemory().toBytes(), BYTE);
-DataSize generalPoolSize = new DataSize(Math.max(0, maxMemory.toBytes() - config.getMaxQueryMemoryPerNode().toBytes()), BYTE);
-builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize));
-</code></pre><h3 id="explain">explain</h3>
+<h3 id="-20147--20196">挖财 (2014.7 ~ 2019.6)</h3>
 <ul>
-<li>RESERVED_POOL = config.properties  query.max-memory-per-node</li>
-<li>SYSTEM_POOL = config.properties  resources.reserved-system-memory (default Runtime.getRuntime().maxMemory() * 0.4 即 0.4 * Xmx)</li>
-<li>GENERAL_POOL = Xmx - RESERVED_POOL - SYSTEM_POOL</li>
+<li>钱管家: 网页数据解析；App服务端开发. KeyWord: Python, lxml, HTML, RegExr, XPath; Tomcat, Java Web, Spring MVC</li>
+<li>用户中心: 微服务改造，服务接口梳理重构；经历2次和QQ联合的高流量活动。 KeyWord: SpringBoot, Dubbo, Kafka, MySQK, Cobar, Refeactor</li>
+<li>信贷数据平台
+<ul>
+<li>搭建基于Canal + Flink + HBase/Phoenix的实时数据同步以及服务，支撑信贷风控数据查询。 KeyWord: Canal, Binlog, Flink, Yarn, HBase, Phoenix, HA</li>
+<li>维护Hive + Spark/Presto + Zeppelin的分析平台，支持风控建模数据分析。KeyWord: Hive, Spark, Zeppelin, Datax, Scheduler</li>
 </ul>
-<h3 id="description">description</h3>
+</li>
+<li>挖财数据中台
 <ul>
-<li>GENERAL_POOL the memory pool used by the physical operators in a query</li>
-<li>SYSTEM_POOL  mostly used by the exchange buffers and readers/writers</li>
-<li>RESERVED_POOL for running a large query when the general pool becomes full (only used by one query), 条件
-<ul>
-<li>GENERAL_POOL有节点出现阻塞节点（block node）情况，即该node内存不足</li>
-<li>RESERVED_POOL没有被使用</li>
+<li>整合公司的数据平台，开放技术能力给业务线。打造实时标签平台，运营平台，广告投放平台。KeyWord: Cloudera Manager, Presto, Flink-CEP</li>
+<li>提供设备指纹，埋点数据等数据服务助力多业务线快速发展。 KeyWord: 神策, Kudu, Impala</li>
 </ul>
 </li>
 </ul>
-<h3 id="action">action</h3>
-<ol>
-<li>整体presto给30G内存，requests是30G，limits是32G</li>
-<li>可以把reserved_pool分配到5G; system_pool 10G; general_pool 15G</li>
-</ol>
-<h3 id="heading">参数设置</h3>
-<h4 id="yaml">yaml</h4>
+<h3 id="-20124--20146">同花顺 (2012.4 ~ 2014.6)</h3>
 <ul>
-<li>limits: 35G</li>
-<li>requests: 32G</li>
+<li>搜索团队: 负责财经垂直领域爬虫 KeyWord: Python,Scrapy, MapReduce, Solr</li>
+<li>搜索团队: 维护搜索HBase集群   KeyWord: HDFS, HBase, Ganglia</li>
 </ul>
-<h4 id="configproperties">config.properties</h4>
+<h2 id="heading1">教育经历</h2>
 <ul>
-<li>query.max-memory=80GB</li>
-<li>query.max-total-memory=120GB</li>
-<li>query.max-memory-per-node=10GB</li>
-<li>query.max-total-memory-per-node=20GB</li>
-<li>memory.heap-headroom-per-node=6GB</li>
-<li>resources.reserved-system-memory=10GB</li>
-</ul>
-<h4 id="jvmconfig">jvm.config</h4>
-<ul>
-<li>-Xmx40G</li>
-<li>-Xms32G</li>
-<li>-XX:ConcGCThreads=6</li>
-<li>-XX:ParallelGCThreads=8</li>
-<li>-XX:G1ReservePercent=10</li>
-<li>-XX:InitiatingHeapOccupancyPercent=50</li>
+<li>中科院沈阳计算所 2010.9 ~ 2012.4</li>
+<li>中国科学技术大学(代培) 2009.9 ~ 2010.7</li>
+<li>河南科技大学 2005.9 ~ 2009.7</li>
 </ul>
 
                     <HR width="100%">
@@ -229,13 +206,13 @@ builder.put(GENERAL_POOL, new MemoryPool(GENERAL_POOL, generalPoolSize));
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="http://example.org/posts/me/">
-                    Next<br>
+                <a class="newer-posts">
+                    Next<br>No newer posts.
                 </a>
                 
                 
                 
-                <a class="older-posts" href="http://example.org/posts/readme/">
+                <a class="older-posts" href="http://example.org/posts/presto_memory/">
                     Previous<br>
                 </a>
                 
